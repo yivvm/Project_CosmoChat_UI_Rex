@@ -11,7 +11,7 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 
-export default function LandingPage() {
+export default function LandingPage({ onStartChat }) {
   return (
     <div
       className="landing"
@@ -31,7 +31,7 @@ export default function LandingPage() {
       <h1>Welcome!</h1>
       <h3>Receive Career Help from ReX!</h3>
       <p>Start a conversation with ReX right now!</p>
-      <button>Start chat with ReX</button>
+      <button onClick={onStartChat}>Start chat with ReX</button>
     </div>
   );
 }
