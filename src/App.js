@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import "./App.css";
-import ChatPage from "./pages/Chat/ChatPage.js";
-import LandingPage from "./pages/Home/LandingPage.js";
+import ChatPage from "./pages/Chat/ChatPage.jsx";
+import LandingPage from "./pages/Home/LandingPage.jsx";
 
 function App() {
   const [showChat, setShowChat] = useState(false);

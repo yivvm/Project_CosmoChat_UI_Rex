@@ -11,6 +11,8 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 
+const API_KEY = "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";
+
 export default function ChatPage() {
   const [typing, setTyping] = useState(false);
 
@@ -68,7 +70,7 @@ export default function ChatPage() {
     };
 
     const apiRequestBody = {
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5", // model: "gpt-3.5-turbo",
       messages: [systemMessage, ...apiMessages], // [message1, message2, message3]
     };
 
@@ -85,14 +87,14 @@ export default function ChatPage() {
       })
       .then((data) => {
         console.log(data);
-        console.log(data.choice[0].message.content);
+        // console.log(data.choice[0].message.content);
         setMessages([
           ...chatMessages,
-          {
-            message: data.choice[0].message.content,
-            sender: "ChatGPT",
-            direction: "incoming",
-          },
+          //   {
+          //     message: data.choice[0].message.content,
+          //     sender: "ChatGPT",
+          //     direction: "incoming",
+          //   },
         ]);
       });
   }
